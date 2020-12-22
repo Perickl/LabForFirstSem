@@ -1,7 +1,7 @@
 SOURCES=encoder.c
 FORLIBRARY=utils.o
-LIBRARY=libs.a
-TARGET=decoded
+LIBRARY=libString.a
+TARGET=encoder
 
 all: $(TARGET)
 

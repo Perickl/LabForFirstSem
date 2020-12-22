@@ -1,11 +1,11 @@
 SOURCES=decoder.c
 FORLIBRARY=utils.o
-LIBRARY=libs.so
+LIBRARY=libCod.so
 TARGET=decoded
 
 all: $(TARGET)
 
-$(TARGET): decoder.o libs.so
+$(TARGET): decoder.o libCod.so
 	gcc decoder.o -o $(TARGET) -std=c99 -L. -lCod -Wl,-rpath,.
 
 decoder.o: decoder.c

@@ -1,12 +1,12 @@
 SOURCES=decoder.c
 FORLIBRARY=utils.o
-LIBRARY=libs.a
+LIBRARY=libsProg.a
 TARGET=decoded
 
 all: $(TARGET)
 
 $(TARGET): decoder.o libs.a
-	gcc decoder.o -o $(TARGET) -std=c99 -L. -lString
+	gcc decoder.o -o $(TARGET) -std=c99 -L. -lProg
 
 decoder.o: decoder.c
 	gcc $< -c -o $@ -std=c99
